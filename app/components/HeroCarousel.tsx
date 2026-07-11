@@ -17,21 +17,21 @@ const slides: Slide[] = [
         title: "Bean & Debt",
         description: "Bean & Debt adalah permainan strategi manajemen waktu dan sumber daya dengan gaya seni kartun 2.5D, yang berlatar di dunia dongeng abad pertengahan penuh keajaiban, di mana kelangsungan hidup tidak diukur dari kekuatan, melainkan dari pengorbanan.",
         bgColor: "from-teal-800/80 via-teal-700/60 to-transparent",
-        bgImage: "/images/slide-1.jpg",
+        bgImage: "/images/slide-1.png",
     },
     {
         id: 2,
-        title: "Game Title 2",
-        description: "Deskripsi game kedua. Ganti teks dan gambar ini sesuai dengan konten game Anda yang sebenarnya.",
+        title: "Fox Gotta Eat",
+        description: "Fox Gotta Eat adalah permainan strategi manajemen risiko dan sumber daya dengan gaya seni kartun 2D yang imut dan penuh warna, yang berlatar di sebuah festival karnaval yang meriah, di mana kelangsungan hidup dan nasib pekerjaan Saffron si rubah tidak ditentukan oleh kekuatan, melainkan oleh kelihaianmu dalam mengelola modal terbatas serta memanfaatkan roda keberuntungan.",
         bgColor: "from-indigo-900/80 via-indigo-800/60 to-transparent",
-        bgImage: "/images/slide-2.jpg",
+        bgImage: "/images/fox-gotta-eat.png",
     },
     {
         id: 3,
-        title: "Game Title 3",
-        description: "Deskripsi game ketiga. Ganti teks dan gambar ini sesuai dengan konten game Anda yang sebenarnya.",
+        title: "Plushie Odyssey",
+        description: "Plushie Odyssey adalah permainan strategi pertahanan taktis (tactical strategy) dengan gaya seni anime yang menawan, berlatar di dunia fantasi yang sedang terancam oleh pasukan monster kegelapan, di mana kemenangan dan keselamatan wilayah tidak hanya bergantung pada keberanian, melainkan pada kejelianmu dalam menyusun taktik formasi dan memimpin para ksatria pelindung.",
         bgColor: "from-rose-900/80 via-rose-800/60 to-transparent",
-        bgImage: "/images/slide-3.jpg",
+        bgImage: "/images/plushie-odyssey.png",
     },
 ];
 
@@ -59,7 +59,7 @@ export default function HeroCarousel() {
     }, [nextSlide]);
 
     return (
-        <section id="hero-carousel" className="relative w-full overflow-hidden" style={{ height: "100svh", minHeight: "480px", maxHeight: "700px" }} aria-label="Hero Carousel">
+        <section id="hero-carousel" className="relative w-full overflow-hidden" style={{ height: "85vh", minHeight: "480px", maxHeight: "700px" }} aria-label="Hero Carousel">
             {slides.map((slide, index) => (
                 <div key={slide.id} className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${index === current ? "opacity-100 z-10" : "opacity-0 z-0"}`} aria-hidden={index !== current}>
                     <div

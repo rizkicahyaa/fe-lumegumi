@@ -19,19 +19,13 @@ export default function Navbar() {
         <header className="absolute top-0 left-0 right-0 z-50">
             <nav className="flex items-center justify-between px-6 py-4 lg:px-12">
                 <Link href="/" className="flex items-center gap-2 shrink-0" id="navbar-logo">
-                    <div className="relative flex items-center justify-center w-10 h-12 bg-white/10 rounded border border-white/30 backdrop-blur-sm">
-                        <svg viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-8 h-10">
-                            <rect x="14" y="2" width="12" height="4" rx="2" fill="white" opacity="0.9" />
-                            <path d="M10 6 Q20 4 30 6 L32 38 Q20 42 8 38 Z" fill="white" opacity="0.15" stroke="white" strokeWidth="1.5" />
-                            <path d="M13 10 L27 10 L29 34 Q20 38 11 34 Z" fill="white" opacity="0.2" />
-                            <ellipse cx="20" cy="28" rx="5" ry="6" fill="#F5C842" opacity="0.9" />
-                            <path d="M18 44 L22 44 L21 48 L19 48 Z" fill="white" opacity="0.7" />
-                        </svg>
+                    <div className="relative flex items-center justify-center w-24">
+                        <img src="images/lume-gumi-logo.png" alt="logo" className="w-full h-full object-contain" />
                     </div>
-                    <div className={`${lilitaOne.className} text-white leading-none`}>
+                    {/* <div className={`${lilitaOne.className} text-white leading-none`}>
                         <div className="text-lg tracking-wide">LUME</div>
                         <div className="text-lg tracking-wide">GUMI</div>
-                    </div>
+                    </div> */}
                 </Link>
 
                 <ul className="hidden md:flex items-center gap-8 lg:gap-10">
