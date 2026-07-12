@@ -17,7 +17,7 @@ export default function About() {
                 <div className="grid grid-cols-3 gap-8 max-w-md">
                     {stats.map((stat) => (
                         <div key={stat.label} className="flex flex-col gap-1">
-                            <span className={`${lilitaOne.className} text-yellow-400 text-3xl lg:text-4xl`}>{stat.value}</span>
+                            <span className={`${lilitaOne.className} text-[#BB9B53] text-3xl lg:text-4xl`}>{stat.value}</span>
                             <span className={`${dmSans.className} text-white/50 text-xs tracking-wide uppercase`}>{stat.label}</span>
                         </div>
                     ))}
