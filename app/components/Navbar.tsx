@@ -7,6 +7,7 @@ import { lilitaOne } from "../fonts";
 const navLinks = [
     { label: "HOME", href: "/" },
     { label: "ABOUT US", href: "/" },
+    { label: "GAMES", href: "/" },
     { label: "CAREERS", href: "/" },
 ];
 
