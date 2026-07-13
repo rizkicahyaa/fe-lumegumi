@@ -39,6 +39,31 @@ export default function HeroCarousel() {
     const [current, setCurrent] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
     const touchStartX = useRef<number | null>(null);
+    const sectionRef = useRef<HTMLElement>(null);
+
+    // Ref langsung ke setiap elemen background — tidak pakai state, tidak ada re-render
+    const bgRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+    // Parallax: manipulasi DOM langsung via rAF, zero re-render
+    useEffect(() => {
+        let rafId: number;
+
+        const update = () => {
+            if (!sectionRef.current) return;
+            const rect = sectionRef.current.getBoundingClientRect();
+            // Hanya hitung jika section masih dalam viewport
+            if (rect.bottom > 0 && rect.top < window.innerHeight) {
+                const offset = -rect.top * 0.3;
+                bgRefs.current.forEach((el) => {
+                    if (el) el.style.transform = `translateY(${offset}px)`;
+                });
+            }
+            rafId = requestAnimationFrame(update);
+        };
+
+        rafId = requestAnimationFrame(update);
+        return () => cancelAnimationFrame(rafId);
+    }, []);
 
     const goToSlide = useCallback(
         (index: number) => {
@@ -63,7 +88,6 @@ export default function HeroCarousel() {
         return () => clearInterval(timer);
     }, [nextSlide]);
 
-    // Swipe gesture untuk mobile
     const handleTouchStart = (e: React.TouchEvent) => {
         touchStartX.current = e.touches[0].clientX;
     };
@@ -79,6 +103,7 @@ export default function HeroCarousel() {
 
     return (
         <section
+            ref={sectionRef}
             id="hero-carousel"
             className="relative w-full overflow-hidden"
             style={{ height: "85vh", minHeight: "480px", maxHeight: "700px" }}
@@ -92,11 +117,15 @@ export default function HeroCarousel() {
                     className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${index === current ? "opacity-100 z-10" : "opacity-0 z-0"}`}
                     aria-hidden={index !== current}
                 >
+                    {/* Background — diperbesar 30% agar tidak ada gap saat parallax bergerak */}
                     <div
-                        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                        ref={(el) => { bgRefs.current[index] = el; }}
+                        className="absolute inset-x-0 bg-cover bg-center bg-no-repeat will-change-transform"
                         style={{
                             backgroundImage: slide.bgImage ? `url(${slide.bgImage})` : undefined,
                             backgroundColor: !slide.bgImage ? "#2d5a4e" : undefined,
+                            top: "-15%",
+                            bottom: "-15%",
                         }}
                     />
 
@@ -114,38 +143,18 @@ export default function HeroCarousel() {
                 </div>
             ))}
 
-            {/* Dot Indicators */}
             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2" role="tablist" aria-label="Carousel navigation">
                 {slides.map((_, index) => (
-                    <button
-                        key={index}
-                        id={`carousel-dot-${index}`}
-                        role="tab"
-                        aria-selected={index === current}
-                        aria-label={`Go to slide ${index + 1}`}
-                        onClick={() => goToSlide(index)}
-                        className={`rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white ${index === current ? "bg-white w-6 h-2.5" : "bg-white/40 hover:bg-white/70 w-2.5 h-2.5"}`}
-                    />
+                    <button key={index} id={`carousel-dot-${index}`} role="tab" aria-selected={index === current} aria-label={`Go to slide ${index + 1}`} onClick={() => goToSlide(index)} className={`rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white ${index === current ? "bg-white w-6 h-2.5" : "bg-white/40 hover:bg-white/70 w-2.5 h-2.5"}`} />
                 ))}
             </div>
 
-            {/* Tombol panah — hanya tampil di tablet ke atas (md:flex), tersembunyi di mobile */}
-            <button
-                id="carousel-prev"
-                onClick={prevSlide}
-                className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/30 hover:bg-black/60 backdrop-blur-sm text-white items-center justify-center transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
-                aria-label="Previous slide"
-            >
+            <button id="carousel-prev" onClick={prevSlide} className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/30 hover:bg-black/60 backdrop-blur-sm text-white items-center justify-center transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white" aria-label="Previous slide">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-4 h-4">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
                 </svg>
             </button>
-            <button
-                id="carousel-next"
-                onClick={nextSlide}
-                className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/30 hover:bg-black/60 backdrop-blur-sm text-white items-center justify-center transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
-                aria-label="Next slide"
-            >
+            <button id="carousel-next" onClick={nextSlide} className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/30 hover:bg-black/60 backdrop-blur-sm text-white items-center justify-center transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white" aria-label="Next slide">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="w-4 h-4">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
