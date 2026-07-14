@@ -54,15 +54,11 @@ export default function Games() {
         <section id="games" className="w-full bg-[#111111] py-20 px-6 lg:px-16" aria-labelledby="games-heading">
             <div className="max-w-6xl mx-auto">
                 {/* Heading */}
-                <div className="mb-12">
-                    <p className={`${dmSans.className} text-[#BB9B53] text-xs tracking-[0.35em] uppercase mb-3`}>Our Portfolio</p>
+                <div className="mb-7">
                     <h2 id="games-heading" className={`${lilitaOne.className} text-white text-3xl lg:text-4xl`}>
                         Games
                     </h2>
-                    <div className="mt-4 w-10 h-[2px] bg-[#BB9B53]" />
                 </div>
-
-                {/* Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {games.map((game) => (
                         <article key={game.id} className="group relative flex flex-col bg-[#111111] border border-white/8 hover:border-white/20 hover:bg-[#1c1c1c] transition-colors duration-300 cursor-pointer overflow-hidden">
