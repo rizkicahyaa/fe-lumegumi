@@ -57,53 +57,28 @@ export default function Footer() {
     return (
         <footer className="w-full bg-[#0d0d0d] border-t border-white/8 px-6 lg:px-16 pt-14 pb-8">
             <div className="max-w-6xl mx-auto">
-
-                {/* Top row */}
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-10 mb-12">
-
-                    {/* Logo + tagline */}
                     <div className="flex flex-col gap-4 max-w-xs">
                         <Link href="/" className="flex items-center w-28" aria-label="Lume Gumi Home">
-                            <Image
-                                src="/images/lume-gumi-logo.png"
-                                alt="Lume Gumi Logo"
-                                width={112}
-                                height={48}
-                                className="object-contain"
-                            />
+                            <Image src="/images/lume-gumi-logo.png" alt="Lume Gumi Logo" width={112} height={48} className="object-contain" />
                         </Link>
-                        <p className={`${dmSans.className} text-white/35 text-sm leading-relaxed`}>
-                            Studio game indie asal Indonesia yang menciptakan pengalaman bermain yang kaya narasi dan bermakna.
-                        </p>
+                        <p className={`${dmSans.className} text-white/35 text-sm leading-relaxed`}>An indie game studio from Indonesia creating narrative-driven gaming experiences that are meaningful and memorable.</p>
                     </div>
 
-                    {/* Nav links */}
                     <div className="flex flex-col gap-3">
-                        <p className={`${dmSans.className} text-white/25 text-xs tracking-[0.25em] uppercase mb-1`}>Navigasi</p>
+                        <p className={`${dmSans.className} text-white/25 text-xs tracking-[0.25em] uppercase mb-1`}>Navigate</p>
                         {navLinks.map((link) => (
-                            <Link
-                                key={link.label}
-                                href={link.href}
-                                className={`${dmSans.className} text-white/50 text-sm hover:text-white transition-colors duration-200`}
-                            >
+                            <Link key={link.label} href={link.href} className={`${dmSans.className} text-white/50 text-sm hover:text-white transition-colors duration-200`}>
                                 {link.label}
                             </Link>
                         ))}
                     </div>
 
-                    {/* Socials */}
                     <div className="flex flex-col gap-3">
-                        <p className={`${dmSans.className} text-white/25 text-xs tracking-[0.25em] uppercase mb-1`}>Ikuti Kami</p>
+                        <p className={`${dmSans.className} text-white/25 text-xs tracking-[0.25em] uppercase mb-1`}>Follow Us</p>
                         <div className="flex items-center gap-1 -ml-2">
                             {socials.map((social) => (
-                                <a
-                                    key={social.label}
-                                    href={social.href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label={social.label}
-                                    className="text-white/35 hover:text-[#BB9B53] transition-colors duration-200 p-2 rounded-md hover:bg-white/5"
-                                >
+                                <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label} className="text-white/35 hover:text-[#BB9B53] transition-colors duration-200 p-2 rounded-md hover:bg-white/5">
                                     {social.icon}
                                 </a>
                             ))}
@@ -111,16 +86,10 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Bottom bar */}
                 <div className="border-t border-white/8 pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                    <p className={`${dmSans.className} text-white/25 text-xs`}>
-                        © {year} Lume Gumi Corp. All rights reserved.
-                    </p>
-                    <p className={`${dmSans.className} text-white/15 text-xs`}>
-                        Made with ❤️ in Indonesia
-                    </p>
+                    <p className={`${dmSans.className} text-white/25 text-xs`}>© {year} Lume Gumi Corp. All rights reserved.</p>
+                    <p className={`${dmSans.className} text-white/15 text-xs`}>Made with ❤️</p>
                 </div>
-
             </div>
         </footer>
     );

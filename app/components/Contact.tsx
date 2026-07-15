@@ -68,7 +68,7 @@ export default function Contact() {
 
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                     {socials.map((social) => (
-                        <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={`Kunjungi ${social.label} Lume Gumi`} className={`group flex flex-col gap-4 p-6 border border-white/8 ${social.color} transition-all duration-300 hover:-translate-y-0.5`}>
+                        <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={`Visit Lume Gumi on ${social.label}`} className={`group flex flex-col gap-4 p-6 border border-white/8 ${social.color} transition-all duration-300 hover:-translate-y-0.5`}>
                             <span className={`text-white/30 transition-colors duration-300 ${social.iconColor}`}>{social.icon}</span>
 
                             <div className="flex flex-col gap-0.5 mt-auto">

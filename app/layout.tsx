@@ -4,11 +4,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
     title: "Lume Gumi Corp.",
-    description: "Lume Gumi Corp. - Indie Game Developer asal Indonesia yang menciptakan pengalaman bermain yang kaya narasi dan bermakna.",
+    description: "Lume Gumi Corp. - An indie game studio from Indonesia creating narrative-driven gaming experiences that are meaningful and memorable.",
     metadataBase: new URL("https://lumegumi-corp.vercel.app"),
     openGraph: {
         title: "Lume Gumi Corp.",
-        description: "Lume Gumi Corp. - Indie Game Developer asal Indonesia yang menciptakan pengalaman bermain yang kaya narasi dan bermakna.",
+        description: "Lume Gumi Corp. - An indie game studio from Indonesia creating narrative-driven gaming experiences that are meaningful and memorable.",
         url: "https://lumegumi-corp.vercel.app",
         siteName: "Lume Gumi Corp.",
         images: [
@@ -19,13 +19,13 @@ export const metadata: Metadata = {
                 alt: "Lume Gumi Corp.",
             },
         ],
-        locale: "id_ID",
+        locale: "en_US",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
         title: "Lume Gumi Corp.",
-        description: "Lume Gumi Corp. - Indie Game Developer asal Indonesia.",
+        description: "Lume Gumi Corp. - An indie game studio from Indonesia.",
         images: ["/images/og-image.png"],
     },
 };
@@ -36,7 +36,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="id" className={`${lilitaOne.variable} ${dmSans.variable} h-full antialiased`}>
+        <html lang="en" className={`${lilitaOne.variable} ${dmSans.variable} h-full antialiased`}>
             <body className="min-h-full flex flex-col bg-neutral-950 text-white">{children}</body>
         </html>
     );

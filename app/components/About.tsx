@@ -80,7 +80,7 @@ export default function About() {
 
                 <div className="grid lg:grid-cols-[1.8fr_1fr] gap-14">
                     <div>
-                        <p className={`${dmSans.className} text-white/60 text-lg leading-9`}>Lume Gumi adalah studio game indie asal Indonesia yang berdedikasi menciptakan pengalaman bermain yang kaya narasi, penuh karakter, dan bermakna. Kami percaya bahwa game bukan sekadar hiburan, melainkan medium untuk menyampaikan cerita yang menginspirasi.</p>
+                        <p className={`${dmSans.className} text-white/60 text-lg leading-9`}>Lume Gumi is an indie game studio from Indonesia dedicated to crafting immersive gaming experiences rich in narrative, memorable characters, and meaningful stories. We believe games are more than entertainment — they are a medium for inspiring the world.</p>
 
                         <div className="mt-8 pt-6 border-t border-white/10 flex gap-1">
                             {socials.map((social) => (
