@@ -51,9 +51,9 @@ export default function OtherProjects() {
 
                             <div className="flex flex-col flex-1 p-6">
                                 {/* Year badge */}
-                                <div className="flex items-center justify-between mb-4">
+                                {/* <div className="flex items-center justify-between mb-4">
                                     <p className={`${dmSans.className} text-white/25 text-xs tracking-[0.2em] uppercase`}>{project.category}</p>
-                                </div>
+                                </div> */}
 
                                 {/* Title */}
                                 <h3 className={`${lilitaOne.className} text-white text-xl mb-3 group-hover:text-[#BB9B53] transition-colors duration-300`}>{project.title}</h3>
