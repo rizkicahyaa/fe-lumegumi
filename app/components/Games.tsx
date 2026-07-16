@@ -11,6 +11,7 @@ interface Game {
     image: string;
     // status: "Released" | "Coming Soon" | "In Development";
     tags: string[];
+    link?: string;
 }
 
 const games: Game[] = [
@@ -22,6 +23,7 @@ const games: Game[] = [
         image: "/images/slide-1.png",
         // status: "Released",
         tags: ["2.5D", "Strategy", "Medieval"],
+        link: "https://store.steampowered.com/app/4515610/Bean__Debt/?beta=0",
     },
     {
         id: 2,
@@ -31,6 +33,7 @@ const games: Game[] = [
         image: "/images/fox-gotta-eat-3.png",
         // status: "Released",
         tags: ["2D", "Casual", "Carnival"],
+        link: "https://revmagames.itch.io/foxgottaeat",
     },
     {
         id: 3,
@@ -40,6 +43,7 @@ const games: Game[] = [
         image: "/images/plushie-odyssey-2.png",
         // status: "In Development",
         tags: ["Anime", "Tactical", "Fantasy"],
+        link: "https://embohtotally.itch.io/plushie-odessy",
     },
     {
         id: 4,
@@ -49,6 +53,7 @@ const games: Game[] = [
         image: "/images/echo-chamber.png",
         // status: "In Development",
         tags: ["2.5D", "Puzzle", "Strategy"],
+        link: "https://versequest.itch.io/echo-chamber",
     },
     {
         id: 5,
@@ -58,15 +63,17 @@ const games: Game[] = [
         image: "/images/path-of-lumino.jpg",
         // status: "In Development",
         tags: ["Student Project", "Gameseed 2025", "Creative"],
+        link: "https://embohtotally.itch.io/path-of-lumino",
     },
     {
         id: 6,
-        title: "Path of Lumino",
+        title: "Piece By Piece",
         genre: "Puzzle · Strategy",
         description: "A relaxing puzzle game where you reconstruct the world one piece at a time. Enjoy a calming atmosphere and satisfying gameplay mechanics.",
         image: "/images/piece-by-piece.png",
         // status: "In Development",
         tags: ["Puzzle", "Relaxing", "Casual"],
+        link: "https://embohtotally.itch.io/piece-by-piece",
     },
 ];
 
@@ -115,13 +122,23 @@ export default function Games() {
                                 {/* Description */}
                                 <p className={`${dmSans.className} text-white/50 text-sm leading-relaxed flex-1`}>{game.description}</p>
 
-                                {/* Tags */}
-                                <div className="flex flex-wrap gap-2 mt-5 pt-5 border-t border-white/8">
-                                    {game.tags.map((tag) => (
-                                        <span key={tag} className={`${dmSans.className} text-[11px] font-medium text-white/40 tracking-wider uppercase`}>
-                                            {tag}
-                                        </span>
-                                    ))}
+                                {/* Tags + Link */}
+                                <div className="flex items-end justify-between gap-3 mt-5 pt-5 border-t border-white/8">
+                                    <div className="flex flex-wrap gap-x-3 gap-y-1">
+                                        {game.tags.map((tag) => (
+                                            <span key={tag} className={`${dmSans.className} text-[11px] font-medium text-white/40 tracking-wider uppercase`}>
+                                                {tag}
+                                            </span>
+                                        ))}
+                                    </div>
+                                    {game.link && (
+                                        <a href={game.link} target="_blank" rel="noopener noreferrer" aria-label={`Play ${game.title}`} onClick={(e) => e.stopPropagation()} className="shrink-0 text-white/25 hover:text-[#BB9B53] transition-colors duration-200">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4">
+                                                <line x1="7" y1="17" x2="17" y2="7" />
+                                                <polyline points="7 7 17 7 17 17" />
+                                            </svg>
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         </article>

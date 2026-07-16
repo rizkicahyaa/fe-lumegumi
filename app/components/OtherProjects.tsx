@@ -17,7 +17,7 @@ const projects: Project[] = [
         category: "Roblox",
         description: "A custom Roblox experience featuring immersive environments and interactive gameplay mechanics developed with Luau.",
         tags: ["Roblox", "Adventure", "Luau", "Multiplayer"],
-        link: "#",
+        link: "https://www.roblox.com/games/128787399745152/Mount-nya-apa",
         year: "2025",
     },
     {
@@ -26,7 +26,7 @@ const projects: Project[] = [
         category: "Management",
         description: "A real-time social platform supporting text and voice communication. Engineered a WebRTC voice channel system using a mesh network topology with Firebase as the signaling layer.",
         tags: ["Full-Stack", "WEBRTC", "Firebase", "Typescript", "PWA"],
-        link: "#",
+        link: "https://chat-platform-beta.vercel.app/",
         year: "2025",
     },
 ];
