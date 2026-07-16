@@ -98,7 +98,7 @@ export default function Games() {
                                 </div> */}
 
                                 {/* Genre */}
-                                <p className={`${dmSans.className} text-white/30 text-xs tracking-[0.2em] uppercase mb-2`}>{game.genre}</p>
+                                {/* <p className={`${dmSans.className} text-white/30 text-xs tracking-[0.2em] uppercase mb-2`}>{game.genre}</p> */}
 
                                 {/* Title */}
                                 <h3 className={`${lilitaOne.className} text-white text-xl mb-3 group-hover:text-[#BB9B53] transition-colors duration-300`}>{game.title}</h3>
