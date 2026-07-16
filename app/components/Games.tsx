@@ -59,6 +59,15 @@ const games: Game[] = [
         // status: "In Development",
         tags: ["Student Project", "Gameseed 2025", "Creative"],
     },
+    {
+        id: 6,
+        title: "Path of Lumino",
+        genre: "Puzzle · Strategy",
+        description: "A relaxing puzzle game where you reconstruct the world one piece at a time. Enjoy a calming atmosphere and satisfying gameplay mechanics.",
+        image: "/images/piece-by-piece.png",
+        // status: "In Development",
+        tags: ["Puzzle", "Relaxing", "Casual"],
+    },
 ];
 
 const statusConfig = {
