@@ -66,6 +66,36 @@ export default function Contact() {
                     </h2>
                 </div>
 
+                {/* Email card */}
+                <a
+                    href="mailto:lumegumibusiness@gmail.com"
+                    className="group flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 p-7 mb-4 border border-white/8 hover:border-[#BB9B53]/30 hover:bg-white/3 transition-all duration-300"
+                    aria-label="Send email to Lume Gumi"
+                >
+                    <div className="flex items-center gap-4">
+                        <span className="text-white/30 group-hover:text-[#BB9B53] transition-colors duration-300 shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                        </span>
+                        <div>
+                            <p className={`${dmSans.className} text-white/30 text-xs tracking-[0.25em] uppercase mb-1`}>Business & Inquiries</p>
+                            <p className={`${dmSans.className} text-white text-base lg:text-lg font-medium group-hover:text-[#BB9B53] transition-colors duration-300`}>
+                                lumegumibusiness@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                    <span className={`${dmSans.className} flex items-center gap-2 text-xs tracking-widest uppercase text-white/25 group-hover:text-[#BB9B53] transition-colors duration-300 shrink-0`}>
+                        Send Email
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300">
+                            <line x1="7" y1="17" x2="17" y2="7" />
+                            <polyline points="7 7 17 7 17 17" />
+                        </svg>
+                    </span>
+                </a>
+
+                {/* Social cards */}
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                     {socials.map((social) => (
                         <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={`Visit Lume Gumi on ${social.label}`} className={`group flex flex-col gap-4 p-6 border border-white/8 ${social.color} transition-all duration-300 hover:-translate-y-0.5`}>
@@ -87,3 +117,4 @@ export default function Contact() {
         </section>
     );
 }
+
