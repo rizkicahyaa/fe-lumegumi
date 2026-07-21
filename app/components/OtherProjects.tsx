@@ -36,7 +36,7 @@ export default function OtherProjects() {
         <section id="other-projects" className="w-full bg-[#171717] py-20 px-6 lg:px-16" aria-labelledby="other-projects-heading">
             <div className="max-w-6xl mx-auto">
                 {/* Heading */}
-                <div className="mb-7">
+                <div className="mb-7" data-aos="fade-up">
                     <h2 id="other-projects-heading" className={`${lilitaOne.className} text-white text-3xl lg:text-4xl`}>
                         Other Projects
                     </h2>
@@ -44,8 +44,8 @@ export default function OtherProjects() {
 
                 {/* Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                    {projects.map((project) => (
-                        <div key={project.id} className="group relative flex flex-col bg-[#171717] border border-white/8 hover:border-white/20 hover:bg-[#1f1f1f] transition-colors duration-300 overflow-hidden">
+                    {projects.map((project, index) => (
+                        <div key={project.id} data-aos="fade-up" data-aos-delay={index * 100} className="group relative flex flex-col bg-[#171717] border border-white/8 hover:border-white/20 hover:bg-[#1f1f1f] transition-colors duration-300 overflow-hidden">
                             {/* Top accent */}
                             <div className="absolute top-0 left-0 right-0 h-[2px] bg-[#BB9B53] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
 

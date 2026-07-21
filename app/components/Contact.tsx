@@ -60,7 +60,7 @@ export default function Contact() {
     return (
         <section id="contact" className="w-full bg-[#1a1a1a] py-20 px-6 lg:px-16" aria-labelledby="contact-heading">
             <div className="max-w-6xl mx-auto">
-                <div className="mb-7">
+                <div className="mb-7" data-aos="fade-up">
                     <h2 id="contact-heading" className={`${lilitaOne.className} text-white text-3xl lg:text-4xl`}>
                         Get in Touch
                     </h2>
@@ -69,6 +69,8 @@ export default function Contact() {
                 {/* Email card */}
                 <a
                     href="mailto:lumegumibusiness@gmail.com"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
                     className="group flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 p-7 mb-4 border border-white/8 hover:border-[#BB9B53]/30 hover:bg-white/3 transition-all duration-300"
                     aria-label="Send email to Lume Gumi"
                 >
@@ -96,7 +98,7 @@ export default function Contact() {
                 </a>
 
                 {/* Social cards */}
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4" data-aos="fade-up" data-aos-delay="200">
                     {socials.map((social) => (
                         <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={`Visit Lume Gumi on ${social.label}`} className={`group flex flex-col gap-4 p-6 border border-white/8 ${social.color} transition-all duration-300 hover:-translate-y-0.5`}>
                             <span className={`text-white/30 transition-colors duration-300 ${social.iconColor}`}>{social.icon}</span>
