@@ -9,8 +9,8 @@ export default function AOSProvider({ children }: { children: React.ReactNode })
         AOS.init({
             duration: 1000,
             easing: "ease-out-cubic",
-            once: true,
-            offset: 50,
+            once: false,
+            offset: 100,
         });
     }, []);
 
