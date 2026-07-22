@@ -12,6 +12,7 @@ interface Game {
     // status: "Released" | "Coming Soon" | "In Development";
     tags: string[];
     link?: string;
+    delay: number;
 }
 
 const games: Game[] = [
@@ -24,6 +25,7 @@ const games: Game[] = [
         // status: "Released",
         tags: ["2.5D", "Strategy", "Medieval"],
         link: "https://store.steampowered.com/app/4515610/Bean__Debt/?beta=0",
+        delay: 0,
     },
     {
         id: 2,
@@ -34,6 +36,7 @@ const games: Game[] = [
         // status: "Released",
         tags: ["2D", "Casual", "Carnival"],
         link: "https://revmagames.itch.io/foxgottaeat",
+        delay: 100,
     },
     {
         id: 3,
@@ -44,6 +47,7 @@ const games: Game[] = [
         // status: "In Development",
         tags: ["Anime", "Tactical", "Fantasy"],
         link: "https://embohtotally.itch.io/plushie-odessy",
+        delay: 200,
     },
     {
         id: 4,
@@ -54,6 +58,7 @@ const games: Game[] = [
         // status: "In Development",
         tags: ["2.5D", "Puzzle", "Strategy"],
         link: "https://versequest.itch.io/echo-chamber",
+        delay: 300,
     },
     {
         id: 5,
@@ -64,6 +69,7 @@ const games: Game[] = [
         // status: "In Development",
         tags: ["Student Project", "Gameseed 2025", "Creative"],
         link: "https://embohtotally.itch.io/path-of-lumino",
+        delay: 400,
     },
     {
         id: 6,
@@ -74,6 +80,7 @@ const games: Game[] = [
         // status: "In Development",
         tags: ["Puzzle", "Relaxing", "Casual"],
         link: "https://embohtotally.itch.io/piece-by-piece",
+        delay: 500,
     },
 ];
 
@@ -94,8 +101,8 @@ export default function Games() {
                     </h2>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                    {games.map((game, index) => (
-                        <article key={game.id} data-aos="fade-up" data-aos-delay={index * 80} className="group relative flex flex-col bg-[#111111] border border-white/8 hover:border-white/20 hover:bg-[#1c1c1c] transition-colors duration-300 cursor-pointer overflow-hidden">
+                    {games.map((game) => (
+                        <article key={game.id} data-aos="fade-up" data-aos-delay={game.delay} className="group relative flex flex-col bg-[#111111] border border-white/8 hover:border-white/20 hover:bg-[#1c1c1c] transition-colors duration-300 cursor-pointer overflow-hidden">
                             {/* Top accent line — muncul saat hover */}
                             <div className="absolute top-0 left-0 right-0 h-[2px] bg-[#BB9B53] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
 

@@ -45,7 +45,7 @@ export default function OtherProjects() {
                 {/* Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     {projects.map((project, index) => (
-                        <div key={project.id} data-aos="fade-up" data-aos-delay={index * 100} className="group relative flex flex-col bg-[#171717] border border-white/8 hover:border-white/20 hover:bg-[#1f1f1f] transition-colors duration-300 overflow-hidden">
+                        <div key={project.id} data-aos="fade-up" data-aos-delay={index * 200} className="group relative flex flex-col bg-[#171717] border border-white/8 hover:border-white/20 hover:bg-[#1f1f1f] transition-colors duration-300 overflow-hidden">
                             {/* Top accent */}
                             <div className="absolute top-0 left-0 right-0 h-[2px] bg-[#BB9B53] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
 
