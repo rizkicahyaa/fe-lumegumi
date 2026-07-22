@@ -92,7 +92,7 @@ const statusConfig = {
 
 export default function Games() {
     return (
-        <section id="games" className="w-full bg-[#111111] py-20 px-6 lg:px-16" aria-labelledby="games-heading">
+        <section id="games" className="section-texture w-full bg-[#111111] relative py-20 px-6 lg:px-16 overflow-hidden" aria-labelledby="games-heading">
             <div className="max-w-6xl mx-auto">
                 {/* Heading */}
                 <div className="mb-7" data-aos="fade-up">

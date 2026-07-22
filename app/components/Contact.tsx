@@ -58,7 +58,7 @@ const socials = [
 
 export default function Contact() {
     return (
-        <section id="contact" className="w-full bg-[#1a1a1a] py-20 px-6 lg:px-16" aria-labelledby="contact-heading">
+        <section id="contact" className="section-texture w-full bg-[#1a1a1a] relative py-20 px-6 lg:px-16 overflow-hidden" aria-labelledby="contact-heading">
             <div className="max-w-6xl mx-auto">
                 <div className="mb-7" data-aos="fade-up">
                     <h2 id="contact-heading" className={`${lilitaOne.className} text-white text-3xl lg:text-4xl`}>

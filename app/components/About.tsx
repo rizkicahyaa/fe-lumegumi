@@ -70,7 +70,7 @@ const socials = [
 
 export default function About() {
     return (
-        <section id="about" className="relative w-full bg-[#2d2d2d] py-20 px-6 lg:px-16 overflow-hidden" aria-labelledby="about-heading">
+        <section id="about" className="section-texture relative w-full bg-[#2d2d2d] py-20 px-6 lg:px-16 overflow-hidden" aria-labelledby="about-heading">
             <div className="max-w-6xl mx-auto">
                 <div className="mb-7" data-aos="fade-down">
                     <h2 id="about-heading" className={`${lilitaOne.className} text-3xl lg:text-3xl font-bold text-white`}>

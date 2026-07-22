@@ -33,7 +33,7 @@ const projects: Project[] = [
 
 export default function OtherProjects() {
     return (
-        <section id="other-projects" className="w-full bg-[#171717] py-20 px-6 lg:px-16" aria-labelledby="other-projects-heading">
+        <section id="other-projects" className="section-texture w-full bg-[#171717] relative py-20 px-6 lg:px-16 overflow-hidden" aria-labelledby="other-projects-heading">
             <div className="max-w-6xl mx-auto">
                 {/* Heading */}
                 <div className="mb-7" data-aos="fade-up">
