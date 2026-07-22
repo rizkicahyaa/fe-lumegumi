@@ -15,21 +15,21 @@ const slides: Slide[] = [
     {
         id: 1,
         title: "Bean & Debt",
-        description: "Bean & Debt adalah permainan strategi manajemen waktu dan sumber daya dengan gaya seni kartun 2.5D, yang berlatar di dunia dongeng abad pertengahan penuh keajaiban, di mana kelangsungan hidup tidak diukur dari kekuatan, melainkan dari pengorbanan.",
+        description: "Bean & Debt is a time and resource management strategy game with a 2.5D cartoon art style, set in a magical medieval fairy tale world where survival is measured not by strength, but by sacrifice.",
         bgColor: "from-teal-800/80 via-teal-700/60 to-transparent",
         bgImage: "/images/slide-1.png",
     },
     {
         id: 2,
         title: "Fox Gotta Eat",
-        description: "Fox Gotta Eat adalah permainan strategi manajemen risiko dan sumber daya dengan gaya seni kartun 2D yang imut dan penuh warna, yang berlatar di sebuah festival karnaval yang meriah, di mana kelangsungan hidup dan nasib pekerjaan Saffron si rubah tidak ditentukan oleh kekuatan, melainkan oleh kelihaianmu dalam mengelola modal terbatas serta memanfaatkan roda keberuntungan.",
+        description: "Fox Gotta Eat is a risk and resource management strategy game with a cute and colorful 2D cartoon art style, set in a festive carnival where the survival and fate of Saffron the fox's job are determined not by strength, but by your skill in managing limited capital and utilizing the wheel of fortune.",
         bgColor: "from-indigo-900/80 via-indigo-800/60 to-transparent",
         bgImage: "/images/fox-gotta-eat.png",
     },
     {
         id: 3,
         title: "Plushie Odyssey",
-        description: "Plushie Odyssey adalah permainan strategi pertahanan taktis (tactical strategy) dengan gaya seni anime yang menawan, berlatar di dunia fantasi yang sedang terancam oleh pasukan monster kegelapan, di mana kemenangan dan keselamatan wilayah tidak hanya bergantung pada keberanian, melainkan pada kejelianmu dalam menyusun taktik formasi dan memimpin para ksatria pelindung.",
+        description: "Plushie Odyssey is a charming anime-style tactical strategy game set in a fantasy world threatened by dark monster armies, where victory and the safety of the realm depend not only on courage, but on your tactical prowess in forming formations and leading the guardian knights.",
         bgColor: "from-rose-900/80 via-rose-800/60 to-transparent",
         bgImage: "/images/plushie-odyssey.png",
     },
@@ -102,24 +102,14 @@ export default function HeroCarousel() {
     };
 
     return (
-        <section
-            ref={sectionRef}
-            id="hero-carousel"
-            className="relative w-full overflow-hidden"
-            style={{ height: "85vh", minHeight: "480px", maxHeight: "700px" }}
-            aria-label="Hero Carousel"
-            onTouchStart={handleTouchStart}
-            onTouchEnd={handleTouchEnd}
-        >
+        <section ref={sectionRef} id="hero-carousel" className="relative w-full overflow-hidden" style={{ height: "85vh", minHeight: "480px", maxHeight: "700px" }} aria-label="Hero Carousel" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
             {slides.map((slide, index) => (
-                <div
-                    key={slide.id}
-                    className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${index === current ? "opacity-100 z-10" : "opacity-0 z-0"}`}
-                    aria-hidden={index !== current}
-                >
+                <div key={slide.id} className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${index === current ? "opacity-100 z-10" : "opacity-0 z-0"}`} aria-hidden={index !== current}>
                     {/* Background — diperbesar 30% agar tidak ada gap saat parallax bergerak */}
                     <div
-                        ref={(el) => { bgRefs.current[index] = el; }}
+                        ref={(el) => {
+                            bgRefs.current[index] = el;
+                        }}
                         className="absolute inset-x-0 bg-cover bg-center bg-no-repeat will-change-transform"
                         style={{
                             backgroundImage: slide.bgImage ? `url(${slide.bgImage})` : undefined,

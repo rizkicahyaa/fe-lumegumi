@@ -70,45 +70,37 @@ const socials = [
 
 export default function About() {
     return (
-        <section id="about" className="section-texture relative w-full bg-[#2d2d2d] py-20 px-6 lg:px-16 overflow-hidden" aria-labelledby="about-heading">
+        <section id="about" className="section-texture relative w-full bg-[#171717] py-16 px-6 lg:px-16 overflow-hidden" aria-labelledby="about-heading">
             <div className="max-w-6xl mx-auto">
-                <div className="mb-7" data-aos="fade-down">
-                    <h2 id="about-heading" className={`${lilitaOne.className} text-3xl lg:text-3xl font-bold text-white`}>
-                        About Us
-                    </h2>
-                </div>
+                <div className="grid lg:grid-cols-[1fr_auto] gap-10 lg:gap-16 items-end">
+                    {/* Left — text content */}
+                    <div>
+                        {/* Heading */}
+                        <div data-aos="fade-up">
+                            <h2 id="about-heading" className={`${lilitaOne.className} text-3xl lg:text-4xl text-white leading-tight`}>
+                                About Us
+                            </h2>
+                        </div>
 
-                <div className="grid lg:grid-cols-[1.8fr_1fr] gap-14">
-                    <div data-aos="fade-down" data-aos-delay="100">
-                        <p className={`${dmSans.className} text-white/60 text-lg leading-9`}>Lume Gumi is an indie game studio from Indonesia dedicated to crafting immersive gaming experiences rich in narrative, memorable characters, and meaningful stories. We believe games are more than entertainment, they are a medium for inspiring the world.</p>
+                        {/* Description */}
+                        <p data-aos="fade-up" data-aos-delay="100" className={`${dmSans.className} text-white/55 text-base lg:text-lg leading-8 mt-6 max-w-2xl`}>
+                            Lume Gumi is an indie game studio from Indonesia dedicated to crafting immersive gaming experiences rich in narrative, memorable characters, and meaningful stories. We believe games are more than entertainment, they are a medium for inspiring the world.
+                        </p>
 
-                        <div className="mt-8 pt-6 border-t border-white/10 flex gap-1">
+                        {/* Social icons */}
+                        <div data-aos="fade-up" data-aos-delay="240" className="mt-6 flex gap-1">
                             {socials.map((social) => (
-                                <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label} className="text-white/35 hover:text-[#BB9B53] transition-colors duration-200 p-2 rounded-md hover:bg-white/10">
+                                <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label} className="text-white/30 hover:text-[#BB9B53] transition-colors duration-200 p-2 rounded-md hover:bg-white/8">
                                     {social.icon}
                                 </a>
                             ))}
                         </div>
                     </div>
 
-                    {/* <div className="border border-white/10 rounded-2xl p-7 bg-white/5" data-aos="fade-left" data-aos-delay="200">
-                        <div className="space-y-6">
-                            <div>
-                                <p className="text-white/40 text-sm uppercase">Founded</p>
-                                <h3 className="text-white text-lg">2025</h3>
-                            </div>
-
-                            <div>
-                                <p className="text-white/40 text-sm uppercase">Based In</p>
-                                <h3 className="text-white text-lg">Indonesia</h3>
-                            </div>
-
-                            <div>
-                                <p className="text-white/40 text-sm uppercase">Focus</p>
-                                <h3 className="text-white text-lg">Narrative Indie Games</h3>
-                            </div>
-                        </div>
-                    </div> */}
+                    {/* Right — character image */}
+                    <div data-aos="fade-up" data-aos-delay="200" className="hidden lg:flex items-end justify-center">
+                        <img src="/images/bean-and-debt-char.png" alt="Bean and Debt Character" className="w-96 xl:w-[26rem] h-auto object-contain object-bottom drop-shadow-2xl" />
+                    </div>
                 </div>
             </div>
         </section>
