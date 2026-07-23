@@ -99,7 +99,7 @@ export default function About() {
 
                     {/* Right — character image */}
                     <div data-aos="fade-up" data-aos-delay="200" className="lg:flex items-end justify-center">
-                        <img src="/images/bean-and-debt-char.png" alt="Bean and Debt Character" className="w-96 xl:w-[26rem] h-auto object-contain object-bottom drop-shadow-2xl" />
+                        <img src="/images/bean-and-debt-char.png" alt="Bean and Debt Character" className="w-96 xl:w-[26rem] h-auto object-contain object-bottom drop-shadow-2xl" onContextMenu={(e) => e.preventDefault()} onDragStart={(e) => e.preventDefault()} />
                     </div>
                 </div>
             </div>

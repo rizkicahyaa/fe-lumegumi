@@ -114,7 +114,7 @@ export default function Contact() {
 
                     {/* Right — character image */}
                     <div data-aos="fade-left" data-aos-delay="100" className="lg:flex items-end justify-center self-end">
-                        <img src="/images/plushie-char.png" alt="Plushie Character" className="w-80 xl:w-96 h-auto object-contain object-bottom drop-shadow-2xl" />
+                        <img src="/images/plushie-char.png" alt="Plushie Character" className="w-80 xl:w-96 h-auto object-contain object-bottom drop-shadow-2xl" onContextMenu={(e) => e.preventDefault()} onDragStart={(e) => e.preventDefault()} />
                     </div>
                 </div>
             </div>
