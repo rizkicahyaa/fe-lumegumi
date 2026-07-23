@@ -98,7 +98,7 @@ export default function About() {
                     </div>
 
                     {/* Right — character image */}
-                    <div data-aos="fade-up" data-aos-delay="200" className="hidden lg:flex items-end justify-center">
+                    <div data-aos="fade-up" data-aos-delay="200" className="lg:flex items-end justify-center">
                         <img src="/images/bean-and-debt-char.png" alt="Bean and Debt Character" className="w-96 xl:w-[26rem] h-auto object-contain object-bottom drop-shadow-2xl" />
                     </div>
                 </div>

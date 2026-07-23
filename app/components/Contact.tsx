@@ -61,7 +61,6 @@ export default function Contact() {
         <section id="contact" className="section-texture w-full bg-[#1a1a1a] relative py-20 px-6 lg:px-16 overflow-hidden" aria-labelledby="contact-heading">
             <div className="max-w-6xl mx-auto">
                 <div className="grid lg:grid-cols-[1fr_auto] gap-10 lg:gap-14 items-end">
-
                     {/* Left — contact content */}
                     <div>
                         <div className="mb-7" data-aos="fade-up">
@@ -71,13 +70,7 @@ export default function Contact() {
                         </div>
 
                         {/* Email card */}
-                        <a
-                            href="mailto:lumegumibusiness@gmail.com"
-                            data-aos="fade-up"
-                            data-aos-delay="100"
-                            className="group flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 p-7 mb-4 border border-white/8 hover:border-[#BB9B53]/30 hover:bg-white/3 transition-all duration-300"
-                            aria-label="Send email to Lume Gumi"
-                        >
+                        <a href="mailto:lumegumibusiness@gmail.com" data-aos="fade-up" data-aos-delay="100" className="group flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5 p-7 mb-4 border border-white/8 hover:border-[#BB9B53]/30 hover:bg-white/3 transition-all duration-300" aria-label="Send email to Lume Gumi">
                             <div className="flex items-center gap-4">
                                 <span className="text-white/30 group-hover:text-[#BB9B53] transition-colors duration-300 shrink-0">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
@@ -87,9 +80,7 @@ export default function Contact() {
                                 </span>
                                 <div>
                                     <p className={`${dmSans.className} text-white/30 text-xs tracking-[0.25em] uppercase mb-1`}>Business & Inquiries</p>
-                                    <p className={`${dmSans.className} text-white text-base lg:text-lg font-medium group-hover:text-[#BB9B53] transition-colors duration-300`}>
-                                        lumegumibusiness@gmail.com
-                                    </p>
+                                    <p className={`${dmSans.className} text-white text-base lg:text-lg font-medium group-hover:text-[#BB9B53] transition-colors duration-300`}>lumegumibusiness@gmail.com</p>
                                 </div>
                             </div>
                             <span className={`${dmSans.className} flex items-center gap-2 text-xs tracking-widest uppercase text-white/25 group-hover:text-[#BB9B53] transition-colors duration-300 shrink-0`}>
@@ -122,18 +113,11 @@ export default function Contact() {
                     </div>
 
                     {/* Right — character image */}
-                    <div data-aos="fade-left" data-aos-delay="100" className="hidden lg:flex items-end justify-center self-end">
-                        <img
-                            src="/images/plushie-char.png"
-                            alt="Plushie Character"
-                            className="w-80 xl:w-96 h-auto object-contain object-bottom drop-shadow-2xl"
-                        />
+                    <div data-aos="fade-left" data-aos-delay="100" className="lg:flex items-end justify-center self-end">
+                        <img src="/images/plushie-char.png" alt="Plushie Character" className="w-80 xl:w-96 h-auto object-contain object-bottom drop-shadow-2xl" />
                     </div>
-
                 </div>
             </div>
         </section>
     );
 }
-
-
