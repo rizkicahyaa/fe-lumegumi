@@ -77,8 +77,8 @@ export default function About() {
                     <div>
                         {/* Heading */}
                         <div data-aos="fade-up">
-                            <h2 id="about-heading" className={`${lilitaOne.className} text-3xl lg:text-4xl text-white leading-tight`}>
-                                About Us
+                            <h2 id="about-heading" className={`${lilitaOne.className} text-3xl lg:text-4xl text-white leading-tight flex items-center gap-4`}>
+                                About Us <img src="/images/lume-gumi-star.png" alt="Star" width={30} />
                             </h2>
                         </div>
 

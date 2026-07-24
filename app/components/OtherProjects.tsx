@@ -37,8 +37,8 @@ export default function OtherProjects() {
             <div className="max-w-6xl mx-auto">
                 {/* Heading */}
                 <div className="mb-7" data-aos="fade-up">
-                    <h2 id="other-projects-heading" className={`${lilitaOne.className} text-white text-3xl lg:text-4xl`}>
-                        Other Projects
+                    <h2 id="other-projects-heading" className={`${lilitaOne.className} text-white text-3xl lg:text-4xl flex items-center gap-4`}>
+                        Other Projects <img src="/images/lume-gumi-star.png" alt="Star" width={30} />
                     </h2>
                 </div>
 

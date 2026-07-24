@@ -96,7 +96,8 @@ export default function Games() {
             <div className="max-w-6xl mx-auto">
                 {/* Heading */}
                 <div className="mb-7" data-aos="fade-up">
-                    <h2 id="games-heading" className={`${lilitaOne.className} text-white text-3xl lg:text-4xl`}>
+                    <h2 id="games-heading" className={`${lilitaOne.className} text-white text-3xl lg:text-4xl flex items-center gap-4`}>
+                        <img src="/images/lume-gumi-star.png" alt="Star" width={30} />
                         Games
                     </h2>
                 </div>
